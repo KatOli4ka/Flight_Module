@@ -1,8 +1,12 @@
 package com.gridnine.testing.flight_module;
-import com.gridnine.testing.flight_module.Flight;
+
 
 import java.util.List;
 
 public interface Filter {
-    List<Flight> filter(List<Flight> flightList);
+    void getAllFlights(List<Flight> flightList);
+    List<Flight> filterBeforeNow(List<Flight> flightList);
+    List<Flight> filterArrivalBeforeDeparture(List<Flight> flightList);
+    List<Flight> filterTwoHours(List<Flight> flightList);
+
 }
